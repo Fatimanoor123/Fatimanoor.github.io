@@ -3,70 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fatima Noor | AI & Computer Vision Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Fatima Noor | AI Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #121212; color: #f4f4f4; }
-        header { background: #1e1e1e; color: white; padding: 20px 0; font-size: 28px; text-align: center; font-weight: 600; }
-        .container { width: 80%; margin: auto; padding: 20px; }
-        .section { padding: 50px 0; text-align: center; }
-        h2 { font-size: 32px; margin-bottom: 10px; }
-        p { font-size: 18px; }
-        
-        .projects { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .card { background: #1e1e1e; padding: 20px; border-radius: 10px; width: 350px; box-shadow: 0 4px 10px rgba(255,255,255,0.1); transition: transform 0.3s ease-in-out; }
-        .card:hover { transform: scale(1.05); }
-        .btn { background: #ff9800; color: white; padding: 12px 18px; display: inline-block; text-decoration: none; border-radius: 5px; font-weight: 600; transition: background 0.3s ease-in-out; }
-        .btn:hover { background: #e68900; }
-        
-        .contact { text-align: center; padding: 40px 0; }
-        .contact a { color: #ff9800; text-decoration: none; font-size: 20px; font-weight: 600; }
-        .contact a:hover { text-decoration: underline; }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        header {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #1de9b6;
+        }
+        .section {
+            padding: 120px 20px;
+            text-align: center;
+            scroll-margin-top: 100px;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.5);
+        }
+        .contact {
+            text-align: center;
+            padding: 120px 20px;
+            background: #111;
+            scroll-margin-top: 100px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-icons a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 30px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #1de9b6;
+        }
     </style>
 </head>
 <body>
     <header>
-        Fatima Noor | AI & Computer Vision Engineer
+        <nav>
+            <h1>Fatima Noor | AI Engineer</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <div class="container">
-        <section class="section">
-            <h2>About Me</h2>
-            <p>AI/ML Engineer specializing in Computer Vision, OpenCV, and YOLO. Passionate about deep learning and automation.</p>
-        </section>
-        
-        <section class="section">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="card">
-                    <h3>PPE Detection Using YOLOv8</h3>
-                    <p>Detects helmets and vests in real-time using YOLOv8.</p>
-                    <a href="https://github.com/Fatimanoor123/PPE-Detection" class="btn">View Project</a>
-                </div>
-                <div class="card">
-                    <h3>Color Detection Using OpenCV</h3>
-                    <p>Identifies colors in images and real-time videos.</p>
-                    <a href="https://github.com/Fatimanoor123/Color-Detection" class="btn">View Project</a>
-                </div>
-                <div class="card">
-                    <h3>Automatic Number Plate Recognition</h3>
-                    <p>Recognizes vehicle number plates using deep learning.</p>
-                    <a href="https://github.com/Fatimanoor123/Number-Plate-Recognition" class="btn">View Project</a>
-                </div>
-                <div class="card">
-                    <h3>Hijab Detection Using YOLO</h3>
-                    <p>Detects head coverings using AI.</p>
-                    <a href="https://github.com/Fatimanoor123/Hijab-Detection" class="btn">View Project</a>
-                </div>
+    <section id="home" class="section">
+        <h2>Welcome to My AI Portfolio</h2>
+        <p>AI & Computer Vision Engineer passionate about innovation, automation, and deep learning.</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="card-container">
+            <div class="card">
+                <p>I am a dynamic and accomplished Computer Science graduate with a solid academic foundation and expertise in Artificial Intelligence, Machine Learning, and Computer Vision. My professional experience includes AI-driven projects in Python, OpenCV, and deep learning frameworks like YOLO. Passionate about solving real-world problems using AI, I am eager to contribute innovative solutions in the field. I am actively looking for a Junior AI Engineer role to further develop my skills and contribute effectively to AI-powered applications.</p>
             </div>
-        </section>
-        
-        <section class="contact">
-            <h2>Contact</h2>
-            <p>Email: fatimanoorr39@gmail.com</p>
-            <p>GitHub: <a href="https://github.com/Fatimanoor123">Fatimanoor123</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/fatimanoorr">LinkedIn Profile</a></p>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>PPE Detection</h3>
+                <p>Real-time PPE detection system using YOLOv8.</p>
+                <a href="https://github.com/Fatimanoor123/PPE-Detection" target="_blank">View Project</a>
+            </div>
+            <div class="card">
+                <h3>Number Plate Recognition</h3>
+                <p>Automatic recognition of vehicle plates using AI.</p>
+                <a href="https://github.com/Fatimanoor123/Number-Plate-Recognition" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>Work Experience</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Python Developer - SkyFi Networks</h3>
+                <p>Developed Python-based applications and AI solutions.</p>
+            </div>
+            <div class="card">
+                <h3>Application Developer Intern - NESCOM</h3>
+                <p>Managed AI-driven projects and developed UI/UX improvements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <h2>Certifications</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Python for Data Science</h3>
+                <p>Completed Python for Data Science, AI, and Development by IBM.</p>
+            </div>
+            <div class="card">
+                <h3>Machine Learning</h3>
+                <p>Completed Machine Learning for All by the University of London.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you're interested in collaborating or have any questions, feel free to connect with me!</p>
+        <div class="social-icons">
+            <a href="https://github.com/Fatimanoor123" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/fatimanoorr/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:fatimanoorr39@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+    </section>
 </body>
 </html>
